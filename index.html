@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perpustakaan Digital Pro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <h1>📚 Perpustakaan Digital Pro</h1>
+    <p>Smart Digital Library System</p>
+
+    <!-- NAVBAR -->
+    <nav>
+        <a href="#">Beranda</a>
+        <a href="#buku">Buku</a>
+        <a href="#formPinjam">Peminjaman</a>
+    </nav>
+</header>
+
+<!-- MAIN -->
+<main class="container">
+
+    <!-- SECTION BUKU -->
+    <section id="buku">
+
+        <div class="top-bar">
+            <input type="text" id="search" placeholder="Cari buku...">
+            <select id="filter">
+                <option value="">Semua Kategori</option>
+                <option value="Teknologi">Teknologi</option>
+                <option value="Pendidikan">Pendidikan</option>
+                <option value="Novel">Novel</option>
+                <option value="Dongeng">Dongeng</option>
+            </select>
+        </div>
+
+        <!-- FORM TAMBAH BUKU -->
+        <div class="form">
+            <input type="text" id="judul" placeholder="Judul Buku">
+            <input type="text" id="kategori" placeholder="Kategori">
+
+            <!-- ✅ TAMBAHAN -->
+            <input type="text" id="gambar" placeholder="Nama file gambar (contoh: clean-code.jpg)">
+            <input type="text" id="link" placeholder="Link buku (https://...)">
+
+            <button class="add" id="btnTambah">Tambah</button>
+        </div>
+
+        <div class="grid" id="list"></div>
+
+    </section>
+
+    <!-- SECTION FORM PEMINJAMAN -->
+    <section id="formPinjam">
+
+        <h2>Form Peminjaman Buku</h2>
+
+        <form id="pinjamForm">
+
+            <input type="text" id="nama" placeholder="Nama" required>
+            <small class="error" id="errNama"></small>
+
+            <input type="email" id="email" placeholder="Email" required>
+            <small class="error" id="errEmail"></small>
+
+            <input type="password" id="password" placeholder="Password" required>
+            <small class="error" id="errPass"></small>
+
+            <input type="number" id="nohp" placeholder="No HP" required>
+            <small class="error" id="errHp"></small>
+
+            <select id="jenis">
+                <option value="">Pilih Jenis Buku</option>
+                <option>Teknologi</option>
+                <option>Pendidikan</option>
+                <option>Novel</option>
+                <option>Dongeng</option>
+            </select>
+            <small class="error" id="errJenis"></small>
+
+            <button type="submit">Pinjam Buku</button>
+
+        </form>
+
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p> Perpustakaan Digital | Tengku Muhammad Raafiq</p>
+</footer>
+
+<!-- TOGGLE -->
+<button id="toggleMode">🌙</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
